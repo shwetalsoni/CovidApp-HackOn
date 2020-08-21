@@ -1,0 +1,374 @@
+			body{
+				font-family: "Ubuntu", sans-serif;
+			}
+			
+			.sections{
+				background-color : black !important;
+				color: white;
+			}
+			.slides{
+				background-color : black !important;
+				color: white;
+				text-align: center;
+			}
+			.qrCode{
+				height: 60% !important;
+			}
+			.sidebar {
+				height: 100%; /* 100% Full-height */
+				width: 0; /* 0 width - change this with JavaScript */
+				position: fixed; /* Stay in place */
+				z-index: 1; /* Stay on top */
+				top: 0;
+				display: block;
+				left: 0;
+				background-color: #fff; /* Black*/
+				overflow-x: hidden; /* Disable horizontal scroll */
+				padding-top: 60px; /* Place content 60px from the top */
+				transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+			  }
+			  
+			  /* The sidebar links */
+			  .sidebar a {
+				padding: 8px 8px 8px 32px;
+				text-decoration: none;
+				font-size: 25px;
+				color: #818181;
+				display: block;
+				transition: 0.3s;
+			  }
+			  
+			  /* When you mouse over the navigation links, change their color */
+			  .sidebar a:hover {
+				color: black;
+			  }
+			  
+			  /* Position and style the close button (top right corner) */
+			  .sidebar .closebtn {
+				position: absolute;
+				top: 0;
+				right: 25px;
+				font-size: 36px;
+				margin-left: 50px;
+			  }
+			  
+			 .openbtn {font-size: 26px;
+				font-weight: 200;
+				cursor: pointer;
+				background-color: transparent;
+				color: white;
+				border: none;
+				} 
+
+				section:nth-last-of-type(2) {
+					background: url('https://unsplash.it/1910/1221?image=626') no-repeat center / cover;
+				  }
+			  
+			  
+			  
+			  #main {
+				transition: margin-left .5s; /* If you want a transition effect */
+				padding: 0px;
+				
+				z-index: 2;
+			  }
+
+			  button:focus {
+				outline:0;
+			  }
+
+			.section .gradient-button {
+				  font-family: "Ubuntu", sans-serif;
+				  font-size: 200%;
+				  text-align: center;
+				  background-color: transparent ;
+				  color : white;
+				  cursor: pointer;
+				  position: relative;
+				  top: 0px;
+				  float: right;
+				  padding: 8px 20px 8px 20px ;
+				  text-decoration: none;
+				  }
+
+			
+			.firstSection .imageConatiner{
+				width: 40%;
+				float: left;
+			}
+
+			.firstSection h1{
+				color: white;
+				font-size: 470%;
+				position: absolute;
+				top: 10%;
+				left: 50%;
+			}
+
+			.firstSection .balanceDiv{
+				width: 12% !important;
+				height: 18%;
+				padding-top: 30px !important;
+				padding-bottom: 10px !important;
+				border-radius: 25%;
+				background-color: #262627;
+				text-align: center;
+				float: left;
+				margin: 4% !important;
+			}
+
+			#incomeBalanceDiv{
+				position: absolute;
+				top: 40%;
+				left: 62.1%;
+			}
+
+			#expenditureBalanceDiv{
+				position: absolute;
+				top: 40%;
+				left: 80%;
+			}
+
+			#remainingBalanceDiv{
+				position: absolute;
+				top: 40%;
+				left: 45%;
+			}
+
+			.donateLinkDiv{
+				text-align: center;
+				color: white;
+				text-decoration: none;
+				padding: 2%;
+			}
+			
+			.donateLinkDiv a{
+				color:#FF852E;
+				font-size: 400%;
+				text-decoration: none;
+				margin: 2%;
+				position: absolute;
+				top: 75%;
+				left: 63%;
+			}
+
+			.balanceDiv h4 {
+				color: #979CA1;
+			}
+
+			
+			.RequestedDonationSlides{
+				background-size: cover;
+			}
+			.label{
+				text-align: center;
+				padding: 5px;
+				margin-top: 5px !important;
+			}
+			.requestButton {
+				  background-color: orange;
+				  border: none;
+				  color: white;
+				  padding: 15px 32px;
+				  text-align: center;
+				  text-decoration: none;
+				  display: inline-block;
+				  font-size: 16px;
+			}
+
+			.donateButton {
+				  background-color: #4CAF50;
+				  border: none;
+				  color: white;
+				  padding: 15px 32px;
+				  text-align: center;
+				  text-decoration: none;
+				  display: inline-block;
+				  font-size: 16px;
+			}
+
+			.typeOfDonation {
+				  background-color: #3CBC8D;
+				  color: white;
+				  width: 25%;
+				  padding: 12px 20px;
+				  margin: 8px 0;
+				  box-sizing: border-box;
+			}
+
+			.amountOfDonation {
+				  background-color: #3CBC8D;
+				  color: white;
+				  width: 25%;
+				  padding: 12px 20px;
+				  margin: 8px 0;
+				  box-sizing: border-box;
+			}
+
+			.formInputDiv{
+				text-align: center;
+				padding: 10px;
+				margin: 10px !important;
+			}
+
+			.formButtonDiv{
+				text-align: center;
+				padding: 10px;
+				margin: 10px !important;
+			}
+
+			.typeOfDonation{
+				margin: 10px;
+			}
+			.amountOfDonation{
+				margin: 10px;
+			}
+
+			.donationSlideHeaderContainer{
+				height: fit-content;
+				width: 33%;
+				text-align: center !important;
+				color: white;
+				position: absolute !important;
+				top: 20px !important;
+			}
+
+			#firstDonationSlide{
+				background-image: url("foodgrain.jpg");
+				
+			}
+			#secondDonationSlide{
+				background-image: url("safetyitem.jpg");
+			}
+			#thirdDonationSlide{
+				background-image: url("medicine.jpg");
+			}
+
+			@media screen and (max-width:600px){
+				.sections{
+					width: 100% !important;
+				}
+
+				.firstSection h1{
+					font-size: 250%;
+					position: absolute;
+					top: 6%;
+					left: 31%;
+					text-align: center;
+				}
+
+				.firstSection .balanceDiv{
+					width: 25% !important;
+					height: 15%;
+					padding-top: 0px !important;
+					padding-bottom: 0px !important;
+					float: left;
+					margin: 4% !important;
+				}
+
+				#incomeBalanceDiv{
+					position: absolute;
+					top: 68%;
+					left: 34.1%;
+					
+				}
+
+				#expenditureBalanceDiv{
+					position: absolute;
+					top: 68%;
+					left: 65%;
+				}
+	
+				#remainingBalanceDiv{
+					position: absolute;
+					top: 68%;
+					left: 3%;
+				}
+
+                .donateLinkDiv {
+					
+					font-size: 60%;
+					margin: 2%;
+					position: absolute;
+					top: 85%;
+					left: -32%;
+				}
+
+				
+				.imageConatiner{
+					width: 100% !important;
+					height: 50% !important;
+					position: absolute;
+					top:20%;
+					left: -1%;
+				}
+				.imageConatiner img{
+					width: 100%;
+					height: 100%;
+				}
+
+				
+				.balanceDivContainer{
+					width: 100% !important;
+				}
+				.balanceDiv{
+					width: 30%;
+					margin : 1% !important;
+				}
+				.donateLinkDiv{
+					width: 100% !important;
+				}
+				.formDiv{
+					width: 100% !important;
+				}
+				.formInputDiv{
+					width: 70% !important;
+					margin: 10px auto !important;
+				}
+				.label{
+					width: 80% !important;
+					margin :5px auto;
+					text-align: center;
+				}
+				.typeOfDonation{
+					width: 80% !important;
+					margin: 0 auto !important;
+				}
+				.amountOfDonation{
+					width: 80% !important;
+					margin: 0 auto !important;
+				}
+				.requestButton{
+					font-size: 100% !important;
+					padding: 5px !important;
+				}
+				.donateButton{
+					font-size: 100% !important;
+					padding: 5px !important;
+				}
+				.qrCode{
+					width: 60% !important;
+					height: auto !important;
+				}
+
+				.sections .gradient-button{
+					font-size: 20px;
+					position: absolute;
+					top: 3%;
+					left: 80%;
+				}
+
+				.openbtn {font-size: 18px;
+					font-weight: 100;
+					
+				} 
+
+				.openButton {
+					position: absolute;
+					top: 4%;
+					left: 3%;
+
+				}
+
+				
+			}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width , initial-scale=1.0">
+		<title>shop</title>
+		<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.css">
+		<link rel="stylesheet" type="text/css" href="shop.css">
+	</head>
+
+	<body>
+
+		<div id="fullpage">
+
+			<div class="section sections firstSection">
+				
+                <div id="mySidebar" class="sidebar" style="width: 0">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="../../landingP.html">Dashboard</a>
+                    <a href="../../Map.html">Locate</a>
+                    <a href="shop.html">Shop</a>
+                    <a href="shopAdmin.html">Shop Admin</a>
+                    <a href="../DonationFolder/donation.html">Donation</a>
+                    <a href="#">Contact</a>
+                </div>
+
+                <div id="orderSidebar" class="orderSidebar" style="width: 0">
+                	<a href="javascript:void(0)" class="closebtn" onclick="closeOrder()">&times;</a>
+                		<form class="orderForm">
+                			<label class="label" for="orderTextarea">your orders</label>
+							<textarea type ="text"class="orderTextarea orderInput" id = "orderTextarea" placeholder="write your orders here"></textarea>
+							<label class="label" for="shopContact">shop contact no.</label>
+							<input class="orderInput" type="number" value="" name="shopContact" id="shopContact">
+							<label class="label" for="userContact">your contact no.</label>
+							<input class="orderInput" type="number" name="userContact" id="userContact" placeholder="your phone no.">
+							<label class="label" for="userAddress">your Address</label>
+							<textarea name="userAddress" class="userAddressTextarea orderInput" id="userAddress" placeholder="your Adress"></textarea>
+							<button type="submit" class="orderSubmitButton" id="orderSubmitButton">SUBMIT</button>
+                		</form>
+                </div>
+
+                <div id="main">
+                    <button class="openbtn openButton" onclick="openNav()">&#9776; CORONA HELP</button>
+                    <a class="gradient-button" href="shopRegister.html"><b>REGISTER</b></a>
+                </div>
+
+                <div class="searchLocationDiv">
+                	<input type="text" class="searchLocation" id = "searchLocation" placeholder="search Location">
+                </div>
+
+                <div class="shopImageContainerDiv">
+
+                	<div class="shopImageHeader"> 
+                		<b>SHOPS</b>
+                	</div>
+
+                	<div class="imageContainers">
+                			<input type="image" class="shopImages" id="imageShop1" src="shop1.jfif" onclick="order('contactNumber1')">
+                		<div class="shopNames" id = "shopName1">
+                			<p>abc general store</p>
+                		</div>
+                		<div class="shopAddress" id="shopaddress1">
+                			<p>abc street , abc colony , abc</p>
+                		</div>
+                		<div class="contactNumber" id="contactNumber1">
+                			9494949494
+                		</div>
+                	</div>
+                	<div class="imageContainers">
+                		<input type="image" class="shopImages" id="imageShop2" src="shop1.jfif" onclick="order('contactNumber2')">
+                		<div class="shopNames" id = "shopName2">
+                			<p>abc general store</p>
+                		</div>
+                		<div class="shopAddress" id="shopaddress2">
+                			<p>abc street , abc colony , abc</p>
+                		</div>
+                		<div class="contactNumber" id="contactNumber2">
+                			9494949494
+                		</div>
+                	</div>
+                	<div class="imageContainers">
+                		<input type="image" class="shopImages" id="imageShop3" src="shop1.jfif" onclick="order('contactNumber3')">
+                		<div class="shopNames" id = "shopName3">
+                			<p>abc general store</p>
+                		</div>
+                		<div class="shopAddress" id="shopaddress3">
+                			<p>abc street , abc colony , abc</p>
+                		</div>
+                		<div class="contactNumber" id="contactNumber3">
+                			9494949494
+                		</div>
+                	</div>
+                	<div class="imageContainers">
+                		<input type="image" class="shopImages" id="imageShop4" src="shop1.jfif" onclick="order('contactNumber4')">
+                		<div class="shopNames" id = "shopName4">
+                			<p>abc general store</p>
+                		</div>
+                		<div class="shopAddress" id="shopaddress4">
+                			<p>abc street , abc colony , abc </p>
+                		</div>
+                		<div class="contactNumber" id="contactNumber4">
+                			9494949494
+                		</div>
+                	</div>
+                	<div class="imageContainers">
+                		<input type="image" class="shopImages" id="imageShop5" src="shop1.jfif" onclick="order('contactNumber5')">
+                		<div class="shopNames" id = "shopName5">
+                			<p>abc general store</p>
+                		</div>
+                		<div class="shopAddress" id="shopaddress5">
+                			<p>abc street , abc colony , abc</p>
+                		</div>
+                		<div class="contactNumber" id="contactNumber5">
+                			9494949494
+                		</div>
+                	</div>
+
+                </div>
+
+			</div>
+
+		</div>
+
+		<script>
+			function openNav() {
+	            if (document.getElementById("mySidebar").style.width == "250px") {
+	                closeNav();
+	            } else {
+	                document.getElementById("mySidebar").style.width = "250px";
+	                document.getElementById("main").style.marginLeft = "250px";
+	            }
+
+	        }
+
+	        /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+	        function closeNav() {
+	            document.getElementById("mySidebar").style.width = "0px";
+	            document.getElementById("main").style.marginLeft = "0px";
+	        }
+
+	       function order( contactNumber) {
+	            if (document.getElementById("orderSidebar").style.width == "300px") {
+	                closeOrder();
+	            } else {
+	                document.getElementById("orderSidebar").style.width = "300px";
+	            }
+
+	        }
+	        function closeOrder() {
+	            document.getElementById("orderSidebar").style.width = "0px";
+	        }
+		</script>
+
+	</body>
+
+</html>

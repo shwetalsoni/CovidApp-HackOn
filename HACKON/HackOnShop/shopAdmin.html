@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title>shop admin</title>
+
+		<style type="text/css">
+			body{
+				background-color: black;
+				color: white;
+				padding: 0;
+				margin: 0;
+			}
+			
+			.sidebar {
+				  height: 100%;
+				  width: 0;
+				  position: fixed;
+				  z-index: 1;
+				  top: 0;
+				  left: 0;
+				  background-color: white;
+				  overflow-x: hidden;
+				  transition: 0.5s;
+				  padding-top: 60px;
+				  outline:0;
+			}
+
+			.shopProfileSidebar {
+				  height: 100%;
+				  width: 0;
+				  position: fixed;
+				  top: 0;
+				  right: 0;
+				  background-color: white;
+				  overflow-x: hidden;
+				  transition: 0.5s;
+				  padding-top: 60px;
+				  outline:0;
+			}
+
+			.sidebar a {
+				  padding: 8px 8px 8px 32px;
+				  text-decoration: none;
+				  font-size: 25px;
+				  color:  #7B848B;
+				  display: block;
+				  transition: 0.3s;
+			}
+			.shopProfileSidebar a {
+				  padding: 8px 8px 8px 32px;
+				  text-decoration: none;
+				  font-size: 25px;
+				  color:  #7B848B;
+				  display: block;
+			}
+
+			#main {
+				  position: relative;
+				  top: 0px;
+				  transition: margin-left .5s;
+				  padding: 16px;
+				  background: transparent;
+				  color: white;
+			}
+
+			.gradient-button {
+				  font-family: "Ubuntu", sans-serif;
+				  font-size: 100%;
+				  text-align: center;
+				  background-color: transparent ;
+				  color : white;
+				  cursor: pointer;
+				  position: relative;
+				  top: 0px;
+				  float: right;
+				  padding: 8px 20px 8px 20px ;
+				  text-decoration: none;
+				  }
+			.openButton{
+				background: transparent;
+				color: white;
+				font-size: 150%;
+				border: none !important;
+			}
+			.allOrderContainer{
+				width: 100%;
+				margin-top: 5%;
+			}
+			.orderContainer{
+				width: 70%;
+				margin: 50px auto;
+			}
+			.orderDivs{
+				width: 100%;
+				border: solid white 1px;
+				padding: 5px;
+				padding-bottom: 5px !important;
+			}
+			.divName{
+				width: 30%;
+				height: 100%;
+				font-size: 120%;
+				float: left;
+			}
+			.shopkeeperNoteTextarea{
+				width: 65%;
+				resize: none;
+			}
+			.acceptOrderButtonDiv{
+				text-align: center;
+			}
+			.acceptOrderButton {
+				  background-color: #4CAF50;
+				  border: none;
+				  color: white;
+				  padding: 15px 32px;
+				  text-align: center;
+				  text-decoration: none;
+				  display: inline-block;
+				  font-size: 16px;
+			}
+			.profileImagediv{
+				width: 200px;
+				height: 200px;
+				margin: 0 auto;
+				border: solid grey 1px;
+				border-radius: 50%;
+			}
+			.profileImagediv img{
+				height: 100%;
+				width: 100%;
+				border-radius: 50%;
+				object-fit: cover;
+			}
+			.ProfileDivs{
+				width: 90%;
+				margin: 2px auto;
+				padding: 2px;
+				color: black;
+				border: solid grey 1px;
+			}
+			.profileDivName{
+				width: 90%;
+				font-size: 90%;
+				padding: 3px;
+			}
+			.profileValue{
+				width: 90%;
+				font-size: 110%;
+				padding: 3px;
+			}
+			.shopEditDiv{
+				text-align: center;
+				border: none !important;
+			}
+			.shopEditButton{
+				background-color: #4CAF50;
+				  border: none;
+				  color: white;
+				  padding: 5px 10px;
+				  text-align: center;
+				  text-decoration: none;
+				  display: inline-block;
+				  font-size: 16px;
+				  margin: 0 auto;
+			}
+			.shopSaveButton{
+				background-color: orange;
+				  border: none;
+				  color: white;
+				  padding: 5px 10px;
+				  text-align: center;
+				  text-decoration: none;
+				  display: inline-block;
+				  font-size: 16px;
+				  margin: 0 auto;
+			}
+			#shopSaveDiv{
+				display: none;
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+				<div id="mySidebar" class="sidebar" style="width: 0">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="../../landingP.html">Dashboard</a>
+                    <a href="../../Map.html">Locate</a>
+                    <a href="shop.html">Shop</a>
+                    <a href="../DonatioFolder/donation.html">Donation</a>
+                    <a href="#">Contact</a>
+                </div>
+
+                <div id="shopProfileSidebar" class="shopProfileSidebar" style="width: 0">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeProfile()">&times;</a>
+                    <div class="profileImagediv" id="profileImagediv">
+                    	<img src="shop1.jfif">
+                    </div>
+                    <div class="shopName ProfileDivs" id="shopNameDiv">
+                		<div class="profileDivName">SHOP NAME</div>
+                		<input class="profileValue" type="text" id="shopName" value="Ganesh Store" readOnly="true">	
+                	</div>
+                	<div class="shopContactNumber ProfileDivs" id="shopContactNumberDiv">
+                		<div class="profileDivName">SHOP CONTACT NUMBER</div>
+                		<input class="profileValue" type="number" id="shopContactNumber" value="9494949494" readOnly="true">	
+                	</div>
+                	<div class="shopAddress ProfileDivs" id="shopaddressDiv">
+                		<div class="profileDivName">ADDRESS</div>
+                		<input class="profileValue" type="text" id="shopAddress" value="abc street , abc colonyh , abc town" readOnly="true">
+                	</div>
+                	<div class="shopEditDiv ProfileDivs" id="shopSaveDiv">
+                		<button type = "submit" class = "shopSaveButton" id ="shopSaveButton" onclick="saveProfile()">Save</button>
+                	</div>
+                	<div class="shopEditDiv ProfileDivs" id="shopEditDiv">
+                		<button type = "submit" class = "shopEditButton" id ="shopEditButton" onclick="editProfile()">Edit</button>
+                	</div>
+                </div>
+
+                <div id="main">
+                    <button class="openbtn openButton" onclick="openNav()">&#9776; CORONA HELP</button>
+                    <button class="gradient-button" onclick="openProfile()">SHOP PROFILE</button>
+                </div>
+
+                <div class="allOrderContainer">
+                	
+                	<div class="orderContainer ">
+                		<div class="customerContactNumber orderDivs" id="customerContactNumber1">
+                			<div class="divName">CUSTOMER CONTACT NO.</div>
+                			9393939393
+                		</div>
+                		<div class="customerName orderDivs" id="customerName1">
+                			<div class="divName">CUSTOMER NAME</div>
+                			Mr. Dev Anand
+                		</div>
+                		<div class="customerAddress orderDivs" id="customerAddress1">
+                			<div class="divName">CUSTOMER ADDRESS</div>
+                			abdbd , ajdkdjja, ldjlkajd
+                		</div>
+                		<div class="customerOrder orderDivs" id="customerOrder1">
+                			<div class="divName">CUSTOMER ORDERS</div>
+                			abc 1kg , bgh kg , hkj 3kg , kjl 1l , gbdh 2pc , hjdk 2pc
+                		</div>
+                		<div class="shopkeeperNote orderDivs" id="shopkeeperNote1">
+                			<div class="divName">YOUR NOTE</div>
+                			<textarea class="shopkeeperNoteTextarea" id="shopkeeperNoteTextarea1">
+                			</textarea>
+                		</div>
+                		<div class="shopkeeperNote orderDivs" id="shopkeeperNote1">
+                			<div class="divName">TOTAL COST</div>
+                			<input type="number" placeholder="total price in Rs." id="totalPrice1">
+                			
+                		</div>
+                		<div class="acceptOrderButtonDiv orderDivs">
+                			<button type = "submit" class = "acceptOrderButton" id ="acceptOrderButton1">Accept Order</button>
+                		</div>
+                	</div>
+
+                	<div class="orderContainer ">
+                		<div class="customerContactNumber orderDivs" id="customerContactNumber2">
+                			<div class="divName">CUSTOMER CONTACT NO.</div>
+                			9393939393
+                		</div>
+                		<div class="customerName orderDivs" id="customerName2">
+                			<div class="divName">CUSTOMER NAME</div>
+                			Mr. Dev Anand
+                		</div>
+                		<div class="customerAddress orderDivs" id="customerAddress2">
+                			<div class="divName">CUSTOMER ADDRESS</div>
+                			abdbd , ajdkdjja, ldjlkajd
+                		</div>
+                		<div class="customerOrder orderDivs" id="customerOrder2">
+                			<div class="divName">CUSTOMER ORDERS</div>
+                			abc 1kg , bgh kg , hkj 3kg , kjl 1l , gbdh 2pc , hjdk 2pc
+                		</div>
+                		<div class="shopkeeperNote orderDivs" id="shopkeeperNote1">
+                			<div class="divName">YOUR NOTE</div>
+                			<textarea class="shopkeeperNoteTextarea" id="shopkeeperNoteTextarea2">
+                			</textarea>
+                		</div>
+                		<div class="shopkeeperNote orderDivs" id="shopkeeperNote2">
+                			<div class="divName">TOTAL COST</div>
+                			<input type="number" placeholder="total price in Rs." id="totalPrice2">
+                			
+                		</div>
+                		<div class="acceptOrderButtonDiv orderDivs">
+                			<button type = "submit" class = "acceptOrderButton" id ="acceptOrderButton2">Accept Order</button>
+                		</div>
+                	</div>
+
+                	<div class="orderContainer ">
+                		<div class="customerContactNumber orderDivs" id="customerContactNumber3">
+                			<div class="divName">CUSTOMER CONTACT NO.</div>
+                			9393939393
+                		</div>
+                		<div class="customerName orderDivs" id="customerName3">
+                			<div class="divName">CUSTOMER NAME</div>
+                			Mr. Dev Anand
+                		</div>
+                		<div class="customerAddress orderDivs" id="customerAddress3">
+                			<div class="divName">CUSTOMER ADDRESS</div>
+                			abdbd , ajdkdjja, ldjlkajd
+                		</div>
+                		<div class="customerOrder orderDivs" id="customerOrder3">
+                			<div class="divName">CUSTOMER ORDERS</div>
+                			abc 1kg , bgh kg , hkj 3kg , kjl 1l , gbdh 2pc , hjdk 2pc
+                		</div>
+                		<div class="shopkeeperNote orderDivs" id="shopkeeperNote3">
+                			<div class="divName">YOUR NOTE</div>
+                			<textarea class="shopkeeperNoteTextarea" id="shopkeeperNoteTextarea3">
+                			</textarea>
+                		</div>
+                		<div class="shopkeeperNote orderDivs" id="shopkeeperNote3">
+                			<div class="divName">TOTAL COST</div>
+                			<input type="number" placeholder="total price in Rs." id="totalPrice3">
+                			
+                		</div>
+                		<div class="acceptOrderButtonDiv orderDivs">
+                			<button type = "submit" class = "acceptOrderButton" id ="acceptOrderButton1">Accept Order</button>
+                		</div>
+                	</div>
+
+                	<div class="orderContainer ">
+                		<div class="customerContactNumber orderDivs" id="customerContactNumber4">
+                			<div class="divName">CUSTOMER CONTACT NO.</div>
+                			9393939393
+                		</div>
+                		<div class="customerName orderDivs" id="customerName4">
+                			<div class="divName">CUSTOMER NAME</div>
+                			Mr. Dev Anand
+                		</div>
+                		<div class="customerAddress orderDivs" id="customerAddress4">
+                			<div class="divName">CUSTOMER ADDRESS</div>
+                			abdbd , ajdkdjja, ldjlkajd
+                		</div>
+                		<div class="customerOrder orderDivs" id="customerOrder4">
+                			<div class="divName">CUSTOMER ORDERS</div>
+                			abc 1kg , bgh kg , hkj 3kg , kjl 1l , gbdh 2pc , hjdk 2pc
+                		</div>
+                		<div class="shopkeeperNote orderDivs" id="shopkeeperNote4">
+                			<div class="divName">YOUR NOTE</div>
+                			<textarea class="shopkeeperNoteTextarea" id="shopkeeperNoteTextarea4">
+                			</textarea>
+                		</div>
+                		<div class="shopkeeperNote orderDivs" id="shopkeeperNote4">
+                			<div class="divName">TOTAL COST</div>
+                			<input type="number" placeholder="total price in Rs." id="totalPrice4">
+                			
+                		</div>
+                		<div class="acceptOrderButtonDiv orderDivs">
+                			<button type = "submit" class = "acceptOrderButton" id ="acceptOrderButton4">Accept Order</button>
+                		</div>
+                	</div>
+
+                	<div class="orderContainer ">
+                		<div class="customerContactNumber orderDivs" id="customerContactNumber5">
+                			<div class="divName">CUSTOMER CONTACT NO.</div>
+                			9393939393
+                		</div>
+                		<div class="customerName orderDivs" id="customerName5">
+                			<div class="divName">CUSTOMER NAME</div>
+                			Mr. Dev Anand
+                		</div>
+                		<div class="customerAddress orderDivs" id="customerAddress5">
+                			<div class="divName">CUSTOMER ADDRESS</div>
+                			abdbd , ajdkdjja, ldjlkajd
+                		</div>
+                		<div class="customerOrder orderDivs" id="customerOrder5">
+                			<div class="divName">CUSTOMER ORDERS</div>
+                			abc 1kg , bgh kg , hkj 3kg , kjl 1l , gbdh 2pc , hjdk 2pc
+                		</div>
+                		<div class="shopkeeperNote orderDivs" id="shopkeeperNote5">
+                			<div class="divName">YOUR NOTE</div>
+                			<textarea class="shopkeeperNoteTextarea" id="shopkeeperNoteTextarea5">
+                			</textarea>
+                		</div>
+                		<div class="shopkeeperNote orderDivs" id="shopkeeperNote1">
+                			<div class="divName">TOTAL COST</div>
+                			<input type="number" placeholder="total price in Rs." id="totalPrice5">
+                			
+                		</div>
+                		<div class="acceptOrderButtonDiv orderDivs">
+                			<button type = "submit" class = "acceptOrderButton" id ="acceptOrderButton5">Accept Order</button>
+                		</div>
+                	</div>
+
+                	<div class="orderContainer ">
+                		<div class="customerContactNumber orderDivs" id="customerContactNumber6">
+                			<div class="divName">CUSTOMER CONTACT NO.</div>
+                			9393939393
+                		</div>
+                		<div class="customerName orderDivs" id="customerName6">
+                			<div class="divName">CUSTOMER NAME</div>
+                			Mr. Dev Anand
+                		</div>
+                		<div class="customerAddress orderDivs" id="customerAddress6">
+                			<div class="divName">CUSTOMER ADDRESS</div>
+                			abdbd , ajdkdjja, ldjlkajd
+                		</div>
+                		<div class="customerOrder orderDivs" id="customerOrder6">
+                			<div class="divName">CUSTOMER ORDERS</div>
+                			abc 1kg , bgh kg , hkj 3kg , kjl 1l , gbdh 2pc , hjdk 2pc
+                		</div>
+                		<div class="shopkeeperNote orderDivs" id="shopkeeperNote6">
+                			<div class="divName">YOUR NOTE</div>
+                			<textarea class="shopkeeperNoteTextarea" id="shopkeeperNoteTextarea6">
+                			</textarea>
+                		</div>
+                		<div class="shopkeeperNote orderDivs" id="shopkeeperNote1">
+                			<div class="divName">TOTAL COST</div>
+                			<input type="number" placeholder="total price in Rs." id="totalPrice6">
+                			
+                		</div>
+                		<div class="acceptOrderButtonDiv orderDivs">
+                			<button type = "submit" class = "acceptOrderButton" id ="acceptOrderButton6">Accept Order</button>
+                		</div>
+                	</div>
+
+                </div>
+
+                
+
+        <script type="text/javascript">
+
+			function openNav() {
+	            if (document.getElementById("mySidebar").style.width == "250px") {
+	                closeNav();
+	            } else {
+	                document.getElementById("mySidebar").style.width = "250px";
+	                document.getElementById("main").style.marginLeft = "250px";
+	            }
+
+	        }
+
+	        /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+	        function closeNav() {
+	            document.getElementById("mySidebar").style.width = "0px";
+	            document.getElementById("main").style.marginLeft = "0px";
+	        }
+
+			function openProfile() {
+	            if (document.getElementById("shopProfileSidebar").style.width == "400px") {
+	                closeProfile();
+	            } else {
+	                document.getElementById("shopProfileSidebar").style.width = "400px";
+	                document.getElementById("main").style.marginRight = "400px";
+	            }
+
+	        }
+
+	        /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+	        function closeProfile() {
+	            document.getElementById("shopProfileSidebar").style.width = "0px";
+	            document.getElementById("main").style.marginRight = "0px";
+	        }
+
+	        function editProfile(){
+	        	document.getElementById("shopName").readOnly = false;
+	        	document.getElementById("shopAddress").readOnly = false;
+	        	document.getElementById("shopContactNumber").readOnly = false;
+	        	document.getElementById("shopSaveDiv").style.display = 'block';
+	        	document.getElementById("shopEditDiv").style.display = 'none';
+	        }
+
+	        function saveProfile(){
+	        	document.getElementById("shopName").readOnly = true;
+	        	document.getElementById("shopAddress").readOnly = true;
+	        	document.getElementById("shopContactNumber").readOnly = true;
+	        	document.getElementById("shopSaveDiv").style.display = 'none';
+	        	document.getElementById("shopEditDiv").style.display = 'block';
+	        }
+
+        </script>
+
+	</body>
+
+</html>

@@ -1,0 +1,150 @@
+
+
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css ";
+
+
+
+body{
+   background-image: url('../Art/building.jpg');
+   background-size: 100% 100%;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-position: center;
+   font-family:  "Ubuntu", sans-serif; 
+   
+}
+
+
+.login-box{
+    width: 55%;
+    height: 65%;
+    background-color: #171717;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 2%;
+}
+
+ h1{
+    
+    position: absolute;
+    top: 1%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 450%;
+   
+}
+
+.textbox{
+    
+    overflow: hidden;
+    font-size: 130%;
+    padding: 1.5% 0;
+    margin: 1.5% 0;
+    border-bottom: 1px solid white;
+}
+
+.textbox i{
+    float: left;
+    width: 2%;
+    text-align: center;
+    color: white;
+    padding-left: 1%;
+}
+
+.textbox input{
+    background: none;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 90%;
+    text-align: center;
+    width: 80%;
+    width: 0 10%;
+    padding-left: 5%;
+}
+
+.btn{
+    width: 42%;
+    height: 7%;
+    background: #DF5F64;
+    color: white;
+    text-decoration: none;
+    border: none;
+    font-size: 170%;
+    cursor: pointer;
+    position: absolute;
+    top: 59%;
+    left: 30%;
+}
+
+.para p {
+    position: absolute;
+    top: 68%;
+    left: 38%;
+    color: white;
+    font-size: 120%;
+}
+
+ .button {
+    position: absolute;
+    top: 81%;
+    left: 45%;
+    color: #DF5F64;
+    font-size: 130% ;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 600px){
+    .button {
+        position: absolute;
+        top: 72% ;
+        left: 66%;
+        text-align: center;
+        font-size: 120%;
+    }
+
+    .login-box {
+        height: 65%;
+        width: 80%;
+    }
+
+    .para p{
+        position: absolute;
+        left: 15%;
+        font-size: 110%;
+        top: 69%;
+
+    }
+
+    .btn {
+        top : 55%;
+        height: 8%;
+        position: absolute;
+        left: 28%;
+        font-size: 150%;
+    }
+
+    h1 {
+        position: absolute;
+        top: 2%;
+        font-size: 400%;
+    }
+
+    .textbox {
+        padding-top: 2%;
+    }
+
+    .textbox input {
+        padding-top: 1.5%;
+    }
+
+}
+
+
+
+
+
+

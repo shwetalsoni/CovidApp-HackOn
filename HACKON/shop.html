@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Itim&display=swap" rel="stylesheet">
+        
+        
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.navbar {
+  width: 100%;
+  background-color: skyblue;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.navbar a:hover {
+  background-color: #01AADA;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+    
+  }
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 25px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 12px;
+  margin: 0;
+  background-color: skyblue;
+}
+
+.dropdown:hover .dropbtn{
+  background-color: #01AADA;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px
+  box-shadow: 0 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+
+.dropdown-content a{
+  float:none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.dropdown-content a:hover{
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+  .container img {
+    position: absolute;
+    top: 0 ;
+    width: 100% ;
+    height: 40% ;
+    top: 13% ;
+    left: 0% ;
+    right: 0% ;
+    
+  }
+
+.container .content {
+  position: absolute;
+  top: 0 ;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.2); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Itim', cursive;
+  font-size: 35px;
+  top: 13% ;
+  left: 0% ;
+}
+
+.alter{
+  position: absolute;
+  top: 60% ;
+  left: 45% ;
+}
+
+.parent{
+  position: absolute;
+  top: 100%;
+  left: 0% ;
+  
+}
+ 
+.comrade {
+  position: absolute;
+  top: 105.5% ;
+  left: 0.5% ;
+}
+
+.comrade1 {
+  position: absolute;
+  top: 105.5% ;
+  left: 33%;
+}
+
+.comrade2 {
+  position: absolute;
+  top: 105.5% ;
+  left: 66%;
+}
+
+.overlay1 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100% ;
+  width: 100% ;
+  opacity: 0;
+  transition : .5 ease;
+  background-color: #D7D7D7;
+}
+
+.comrade:hover .overlay1 {
+  opacity: 0.8;
+}
+
+.text1 {
+  color: #828788;
+  font-size: 45px;
+  position: absolute;
+  top: 50% ;
+  left: 50% ;
+  -webkit-transform : translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.overlay2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100% ;
+  width: 100% ;
+  opacity: 0;
+  transition : .5 ease;
+  background-color: #D7D7D7;
+}
+
+.comrade1:hover .overlay2 {
+  opacity: 0.8;
+}
+
+.text2 {
+  color: #828788;
+  font-size: 45px;
+  position: absolute;
+  top: 50% ;
+  left: 50% ;
+  -webkit-transform : translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.overlay3 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100% ;
+  width: 100% ;
+  opacity: 0;
+  transition : .5 ease;
+  background-color: #D7D7D7;
+}
+
+.comrade2:hover .overlay3 {
+  opacity: 0.8;
+}
+
+.text3 {
+  color: #828788;
+  font-size: 45px;
+  position: absolute;
+  top: 50% ;
+  left: 50% ;
+  -webkit-transform : translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+.btn1{
+  position: absolute;
+  top: 80% ;
+  left: 20% ;
+  background-color: #8BDBE6;
+  border: none;
+  color: white;
+  padding: 25px;
+  text-align: center;
+  display: inline-block;
+  font-size: 20px;
+  margin: 6px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.btn2{
+  position: absolute;
+  top: 65% ;
+  left: 20% ;
+  background-color: #8BDBE6;
+  border: none;
+  color: white;
+  padding: 25px;
+  text-align: center;
+  display: inline-block;
+  font-size: 20px;
+  margin: 6px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+input[type=text] {
+  width: 200px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 20px;
+  text-align: center;
+  background-color: white;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 25px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  top:75% ;
+  left: 70% ;
+  position: absolute;
+}
+
+input[type=text]:focus {
+  width: 50%;
+}
+
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  position: absolute;
+  top: 190% ;
+  left: 10% ;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+  font-size: 20px;
+}
+
+.flip-car{
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  position: absolute;
+  top: 170% ;
+  left: 10% ;
+  position: absolute;
+  top: 190% ;
+  left: 40% ;
+}
+
+.flip-car-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-car:hover .flip-car-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-car-front, .flip-car-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-car-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-car-back {
+  background-color: #F85B18;
+  color: white;
+  transform: rotateY(180deg);
+  font-size: 20px;
+}
+
+.flip-ca{
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  position: absolute;
+  top: 170% ;
+  left: 10% ;
+  position: absolute;
+  top: 190% ;
+  left: 70% ;
+}
+
+.flip-ca-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-ca:hover .flip-ca-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-ca-front, .flip-ca-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-ca-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-ca-back {
+  background-color: #E09A9A;
+  color: white;
+  transform: rotateY(180deg);
+  font-size: 20px;
+}
+
+
+.flip-c{
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  position: absolute;
+  top: 10% ;
+  left: 10% ;
+  position: absolute;
+  top: 245% ;
+  left: 25% ;
+}
+
+.flip-c-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-c:hover .flip-c-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-c-front, .flip-c-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-c-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-c-back {
+  background-color: #FFED2B;
+  color: white;
+  transform: rotateY(180deg);
+  font-size: 20px;
+}
+
+
+.flip{
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  position: absolute;
+  top: 10% ;
+  left: 10% ;
+  position: absolute;
+  top: 245% ;
+  left: 55% ;
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-front, .flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-back {
+  background-color: #56BF2F;
+  color: white;
+  transform: rotateY(180deg);
+  font-size: 20px;
+}
+
+
+  .contain img {
+    position: absolute;
+    top: 0 ;
+    width: 100% ;
+    height: 150% ;
+    top: 155% ;
+    left: 0% ;
+    right: 0% ;
+    
+  }
+
+.contain .cont {
+  position: absolute;
+  top: 0 ;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.2); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Itim', cursive;
+  font-size: 35px;
+  top: 150% ;
+  left: 0% ;
+}
+
+.chip {
+  display: inline-block;
+  padding: 0 25px;
+  height: 50px;
+  font-size: 16px;
+  line-height: 50px;
+  border-radius: 25px;
+  background-color: #C4C4C4;
+  position: absolute;
+  top: 235% ;
+  left: 14% ;
+}
+
+.chip img {
+  float: left;
+  margin: 0 10px 0 -25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.chip1 {
+  display: inline-block;
+  padding: 0 25px;
+  height: 50px;
+  font-size: 16px;
+  line-height: 50px;
+  border-radius: 25px;
+  background-color: #C4C4C4;
+  position: absolute;
+  top: 235% ;
+  left: 45% ;
+}
+
+.chip1 img {
+  float: left;
+  margin: 0 10px 0 -25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 1px solid #B0B0B0;
+}
+
+.chip2 {
+  display: inline-block;
+  padding: 0 25px;
+  height: 50px;
+  font-size: 16px;
+  line-height: 50px;
+  border-radius: 25px;
+  background-color: #C4C4C4;
+  position: absolute;
+  top: 235% ;
+  left: 76% ;
+}
+
+.chip2 img {
+  float: left;
+  margin: 0 10px 0 -25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 1px solid #B0B0B0;
+}
+
+.chip3 {
+  display: inline-block;
+  padding: 0 25px;
+  height: 50px;
+  font-size: 16px;
+  line-height: 50px;
+  border-radius: 25px;
+  background-color: #B0B0B0;
+  position: absolute;
+  top: 290% ;
+  left: 30% ;
+}
+
+.chip3 img {
+  float: left;
+  margin: 0 10px 0 -25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 1px solid #B0B0B0;
+}
+
+
+.chip4 {
+  display: inline-block;
+  padding: 0 25px;
+  height: 50px;
+  font-size: 16px;
+  line-height: 50px;
+  border-radius: 25px;
+  background-color: #B0B0B0;
+  position: absolute;
+  top: 290% ;
+  left: 60% ;
+}
+
+.chip4 img {
+  float: left;
+  margin: 0 10px 0 -25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 1px solid #B0B0B0;
+}
+</style>
+
+</head>
+
+<body>
+
+
+<div class="navbar">
+    <ul class="navbar-left">
+        <a  href="shop.html"><i class="fa fa-fw fa-home"></i> local Shop</a> 
+        <a href="index.html"><i class="fa fa-fw fa-search"></i>Map</a> 
+        <a href="donationFolder/donation.html"><i class="fa fa-fw fa-envelope"></i> Donation</a> 
+
+        <div class="dropdown">
+             
+                 <button class="dropbtn">Login
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                 </button>
+                 <div class="dropdown-content">
+                    <a href="profile.html">My Profile</a>
+                    <a href="order.html">Orders</a>
+                 </div>
+        </div>     
+    </ul>    
+   
+    <ul class="navbar-right">
+      <li><a href="#" id="cart"><i class="fa fa-shopping-cart"></i> Cart <span class="badge">3</span></a></li>
+    </ul>     
+
+</div>
+
+<div class="container">
+  <img src="shop.jpg" style={"width":100% ; "height":25%}>
+  <div class="content">
+    <h1>Shop From Your Nearest Store</h1>
+  </div>
+</div>
+
+<div class="alter">
+    <img src="pro.png">
+</div>  
+
+
+<a class="btn1 " href="shop_register.html ">Shop Register</a>
+<a class="btn2 " href="user.html">User Account</a>
+
+
+<form>
+  <input type="text" name="search"  placeholder="Search location">
+</form>
+
+
+<div class="parent">
+     <img src="ham.jpg"  width="1518" height="400">
+</div>
+
+<div class="comrade">     
+      <img src="avoid.jpg" width="500" height="320" class="over-img">
+      <div class="overlay1">
+          <div class="text1">Avoid Rush Shop Online</div>
+      </div> 
+</div>       
+
+<div class="comrade1">
+      <img src="foe.jpg" width="500" height="320" class="over-img1">
+      <div class="overlay2">
+          <div class="text2">Stay Home Save Lives</div>
+      </div>  
+</div>      
+
+<div class="comrade2">
+     <img src="safe.jfif" width="499" height="320" class="over-img2">
+     <div class="overlay3">
+         <div class="text3">Stay Home Stay Safe</div>
+     </div>  
+</div>       
+    
+
+
+<div class="contain">
+  <img src="fame.jfif" style={"width":100% ; "height":25%}>
+  <div class="cont">
+    <h1>Shops Near You</h1>
+  </div>
+</div>
+ 
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="3.png"  style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1> 
+      <p>Near Housing Board </p> 
+    </div>
+  </div>
+</div>
+
+<div class="flip-car">
+  <div class="flip-car-inner">
+    <div class="flip-car-front">
+      <img src="4.jfif"  style="width:300px;height:300px;">
+    </div>
+    <div class="flip-car-back">
+      <h1>Max</h1> 
+      <p>Near Phase 3 </p> 
+    </div>
+  </div>
+</div>
+
+<div class="flip-ca">
+  <div class="flip-ca-inner">
+    <div class="flip-ca-front">
+      <img src="6.jpg"  style="width:300px;height:300px;">
+    </div>
+    <div class="flip-ca-back">
+      <h1>Joy</h1> 
+      <p> Modern Housing Complex</p> 
+    </div>
+  </div>
+</div>
+
+<div class="flip-c">
+  <div class="flip-c-inner">
+    <div class="flip-c-front">
+      <img src="7.jfif"  style="width:300px;height:300px;">
+    </div>
+    <div class="flip-c-back">
+      <h1>Hopper</h1> 
+      <p>Amravati</p> 
+    </div>
+  </div>
+</div>
+
+<div class="flip">
+  <div class="flip-inner">
+    <div class="flip-front">
+      <img src="mam.jfif"  style="width:300px;height:300px;">
+    </div>
+    <div class="flip-back">
+      <h1>James</h1> 
+      <p>Mohali</p> 
+    </div>
+  </div>
+</div>
+
+
+<div class="chip">
+  <img src="av.png" alt="Person" width="96" height="96">
+  John Doe
+</div>
+
+<div class="chip1">
+  <img src="mell.png" alt="Person" width="96" height="96">
+  Max
+</div>
+
+<div class="chip2">
+  <img src="joy.png" alt="Person" width="96" height="96">
+  Joy
+</div>
+
+<div class="chip3">
+  <img src="hop.png" alt="Person" width="96" height="96">
+  Hopper
+</div>
+
+<div class="chip4">
+  <img src="jame.png" alt="Person" width="96" height="96">
+  James
+</div>
+
+</body>
+</html> 

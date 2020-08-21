@@ -1,0 +1,179 @@
+.section {
+    
+  background-image: url('../Art/lands.png');
+  background-size: cover ;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+ 
+}
+
+.section .slide .btn {
+ 
+    font-size: 80px;
+    color: white;
+    opacity: 0.7;
+    text-decoration: none;
+    font-family: "Ubuntu", sans-serif;
+}
+
+
+.section .slide h3 {
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  top: 69%;
+  left: 14%;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.section .slide p {
+  font-size: 15px ;
+  font-family: "Ubuntu", sans-serif;
+  color: white;
+  position: absolute;
+  top: 78%;
+  left: 5%;
+}
+
+.section .slide #next h3 {
+    font-size: 30px;
+    color: white;
+    top: 69%;
+    left: 48.5%;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.section .slide #next p {
+  font-size: 15px;
+  color: white;
+  top: 78%;
+  left: 39%;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.section .slide #pro h3 {
+font-size: 30px;
+color: white;
+top: 69%;
+left: 82%;
+font-family: "Ubuntu", sans-serif;
+}
+
+.section .slide #pro p {
+font-size: 15px;
+color: white;
+top: 78%;
+left: 71%;
+font-family: "Ubuntu", sans-serif;
+}
+
+
+
+ .section .slide .gradient-button {
+
+  font-family: "Ubuntu", sans-serif;
+  font-size: 30px;
+  text-align: center;
+  background-color: transparent ;
+  color : yellow;
+  border-radius: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 5% ;
+  left: 29% ;
+  border: 1.5px solid yellow;
+  margin: 10px;
+  padding: 8px 20px 8px 20px ;
+  text-decoration: none;
+  
+}
+
+
+
+button:focus {
+  outline:0;
+}
+
+
+ .section .slide .sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  outline:0;
+}
+
+.section .slide .sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color:  #7B848B;
+  display: block;
+  transition: 0.3s;
+}
+.locatec{
+  
+  font-size: 80px;
+  color: white;
+  opacity: 0.7;
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  font-family: "Ubuntu", sans-serif;
+}
+section:nth-last-of-type(2) {
+  background: url('https://unsplash.it/1910/1221?image=626') no-repeat center / cover;
+}
+.section .slide .sidebar a:hover {
+  color:black;
+}
+
+.section .slide .sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+ .section .slide .openbtn {
+    font-size: 26px;
+    font-weight: 200;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    border: none;
+    position: absolute;
+    left: 1%;
+    margin-top: 1%;
+
+
+}
+.navbtn{
+  top: 0%;
+}
+
+.section .slide  .openbtn:hover {
+  background-color:transparent;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .section .slide .sidebar {padding-top: 15px;}
+  .section .slide .sidebar a {font-size: 18px;}
+}

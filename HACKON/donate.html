@@ -1,0 +1,408 @@
+<html>
+
+    <head>
+        <title>donate</title>
+
+        <link rel = "stylesheet" type = "text/css" href = "BOOTSTRAP\css\bootstrap.min.css">
+
+        <style>
+
+            #Top_navbar{
+                background-color: rgb(195, 247, 247);
+            }
+
+            #down_navbar{
+              background-color: rgb(23, 187, 187);
+            }
+
+           body {
+               padding: 0;
+               margin : 0;
+           }
+
+           #donationLarge_image{
+               width: 100%;
+               height: 250px;
+              
+           }
+           #safetyDiv img{
+             align-content: center;
+           }
+
+           #stayHome_image{
+             width :400px;
+             margin-top: 20px;
+             margin-bottom: 20px;
+             margin-left: auto;
+             margin-right: auto;
+             display: block;
+           }
+
+           #symptoms_div{
+            padding: 5px;
+           }
+
+           #govImage{
+             width: 1200px;
+             margin-left: auto;
+             margin-right: auto;
+             display: block;
+             margin-bottom: 25px;
+           }
+           #donation_count{
+             padding: 5px;
+             background-color: rgb(104, 106, 245);
+             height: 80px;
+           }
+
+           .donation_count_item{
+             width : 205px;
+             float: left;
+             background-color: rgb(104, 106, 245);
+             color: white;
+             border-left: 2px solid white;
+             padding: 5px;
+           }
+
+           #date_mention_count{
+             float: left;
+             width : 205px;
+             background-color: rgb(104, 106, 245);
+             padding: 5px;
+           }
+
+          .flip-card {
+            float: left;
+            background-color: transparent;
+            margin: 10px;
+            width: 300px;
+            height: 200px;
+            perspective: 1000px;
+          }
+
+         
+          .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+          }
+
+          .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+          }
+
+          .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden; 
+            backface-visibility: hidden;
+          }
+
+          .flip-card-front {
+            background-color: #bbb;
+            color: black;
+            border-radius: 50%;
+          }
+          .flip-card-back {
+            background-color: dodgerblue;
+            color: white;
+            transform: rotateY(180deg);
+          }
+
+          .donation_cards{
+            width: fit-content;
+            margin: 20px auto 0 auto;
+            background-color: transparent;
+            height: 240px;
+            align-items: center;
+          }
+
+          #bottom_cards{
+            margin-top: 0 !important;
+          }
+
+          #donation_card_container{
+            padding: 5px;
+            width: 90%;
+            height: fit-content;
+            margin: 10px auto;
+            align-items: center;
+            background-color: rgb(195, 247, 247);
+          }
+
+          .amountDiv{
+            width: fit-content;
+            height: fit-content;
+            padding: 10px;
+            margin: 10px auto;
+          }
+
+          .onlineButton{
+            margin: 5px;
+            margin-top: 10px !important;
+          }
+
+          .cashButton{
+            margin-top: 10px !important;
+          }
+
+          .askDonationButton{
+            margin: 10px auto !important;
+          }
+
+          .moneyAmount{
+            margin: 10px auto !important;
+          }
+
+          .buttonContainer{
+            padding: 5px;
+            width: fit-content;
+            height: fit-content;
+            margin: 5px auto !important;
+          }
+
+          .grainType{
+            margin: 15px auto 5px auto !important;
+          }
+
+          .grainAmount{
+            margin: 5px auto !important;
+          }
+
+          .navbarBottom{
+            clear: both;
+            width: 100% !important;
+           background-color: cornflowerblue;
+          }
+
+          .individualSearchForm{
+            float: right;
+          }
+
+          #carouselContainer{
+            padding: 20px;
+            margin: 20px;
+          }
+          .carouselItem{
+          }
+
+          .demandCarousel{
+            width: 50%;
+            margin: 20px auto;
+            margin-bottom: 50px !important;
+          }
+
+          #carouselHeader{
+            width: 100%;
+            background-color: rgb(82, 202, 206);
+            color: white;
+            text-align: center;
+          }
+
+        .DemandAmountText{
+          color: black;
+        }
+
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-light " id = "Top_navbar">
+            <div class="dropdown">
+                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Profile
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">your donations</a>
+                  <a class="dropdown-item" href="#">edit profile</a>
+                  <a class="dropdown-item" href="#">log out</a>
+                  <a class="dropdown-item" href="#">add family member</a>
+                </div>
+              </div>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Donation<span class="sr-only">(current)</span></a>
+                </li><li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Local Shop</a>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search Location" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+        </nav>
+
+        <div id = "donation_count">
+          <div  id = "date_mention_count">data as of <p>9:00 am , 06/04/2020</p></div>
+          <div class = "donation_count_item" id = "money_count"><h5>Money  </h5> Rs.9,99,99,999</div>
+          <div class = "donation_count_item" id = "grains_count"><h5>Food Grains worth  </h5> Rs.99,99,999</div>
+          <div class = "donation_count_item" id = "medicines_count"><h5>Medicines worth </h5> Rs.99,99,999</div>
+          <div class = "donation_count_item" id = "safetyItems_count"><h5>Safety Items worth  </h5> Rs.9,99,99,999</div>
+          <div class = "donation_count_item" id = "Total"><h5>Total  </h5> Rs.99,99,99,999</div>
+        </div>
+        
+
+        <div id = "safetyDiv">
+          <img id = "stayHome_image" src = "stayHome.jpeg">
+          <div id = "symptoms_div">
+            <img id = "govImage" src = "govImage.png">
+          </div>
+        </div>
+s
+        <div id = "carouselConatiner">
+          <div id="carouselExampleSlidesOnly" class="carousel slide demandCarousel" data-ride="carousel">
+            <div class="carousel-inner">
+              <div id = "carouselHeader">
+                <h4>THE REQUESTED DONATIONS ARE</h4>
+              </div>
+              <div class="carousel-item active carouselItem">
+                  <img src="carouselMoney.jpg" class="d-block w-100" alt="Money">
+                  <div class="carousel-caption d-none d-md-block DemandAmountText">
+                    <h4>Money</h4>
+                    <p><h5>NATIONAL       </h5>Rs. 9,99,99,99,999</p>
+                    <p><h5>LOCAL          </h5>9,99,99,999</p>
+                  </div>
+              </div>
+              <div class="carousel-item carouselItem ">
+                <img src="carouselFoodgrains.jpg" class="d-block w-100" alt="Food Grains">
+                <div class="carousel-caption d-none d-md-block DemandAmountText">
+                  <h4>Food Grains</h4>
+                  <p><h5>NATIONAL       </h5>99,99,999 Kg</p>
+                  <p><h5>LOCAL          </h5>9,99,999 Kg</p>
+                </div>
+              </div>
+              <div class="carousel-item carouselItem">
+                <img src="carouselMedicine.jpg" class="d-block w-100" alt="Medicines">
+                <div class="carousel-caption d-none d-md-block DemandAmountText">
+                  <h4>Medicines</h4>
+                  <p><h5>NATIONAL       </h5>worth Rs.99,99,999</p>
+                  <p><h5>LOCAL          </h5>worth Rs. 9,99,999</p>
+                </div>
+              </div>
+              <div class="carousel-item carouselItem">
+                <img src="carouselSafetyItems.jfif" class="d-block w-100" alt="Safety Items">
+                <div class="carousel-caption d-none d-md-block DemandAmountText">
+                  <h4>Safety Items</h4>
+                  <p><h5>NATIONAL       </h5>worth Rs. 9,99,99,999</p>
+                  <p><h5>LOCAL          </h5>worth Rs. 99,99,999</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <img id = "donationLarge_image" src = "header_image.jpeg">
+
+        <div id = "donation_card_container">
+
+            <div class = "donation_cards" id = "top_cards">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="money.jpg" alt="money" style="width:300px;height:200px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <div class = "amountDiv">
+                      <form class="form-inline">
+                        <input class="form-control mr-sm-2 moneyAmount" type="search" placeholder="Amount in Rs." aria-label="Search">
+                        <button class="btn btn-success my-2 my-sm-0 onlineButton" type="submit">Online Payment</button>
+                        <button class="btn btn-success my-2 my-sm-0 cashButton" type="submit">Cash payment</button>
+                        <button class="btn btn-warning my-2 my-sm-0 askDonationButton" type="submit">Ask Donation</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="Rice.jpg." alt="food grains" style="width:300px;height:200px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <form class="form-inline">
+                      <input class="form-control mr-sm-2 grainType" type="search" placeholder="Type of grain , e.g. rice" aria-label="Search">
+                      <input class="form-control mr-sm-2 grainAmount" type="search" placeholder="Amount in kg" aria-label="Search">
+                      <div class = "buttonContainer">
+                        <button class="btn btn-success my-2 my-sm-0 makeDonation" type="submit">Donate</button>
+                        <button class="btn btn-warning my-2 my-sm-0 askDonationButton" type="submit">Ask Donation</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="medicines.jpg" alt="medicines" style="width:300px;height:200px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <form class="form-inline">
+                      <input class="form-control mr-sm-2 grainType" type="search" placeholder="medicine/problem name" aria-label="Search">
+                      <input class="form-control mr-sm-2 grainAmount" type="search" placeholder="Amount in number" aria-label="Search">
+                      <div class = "buttonContainer">
+                        <button class="btn btn-success my-2 my-sm-0 makeDonation" type="submit">Donate</button>
+                        <button class="btn btn-warning my-2 my-sm-0 askDonationButton" type="submit">Ask Donation</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class = "donation_cards" id = "bottom_cards">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="safetyEquipments.jpg" alt="safety items" style="width:300px;height:200px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <form class="form-inline">
+                      <input class="form-control mr-sm-2 grainType" type="search" placeholder="Type of item" aria-label="Search">
+                      <input class="form-control mr-sm-2 grainAmount" type="search" placeholder="Amount in number" aria-label="Search">
+                      <div class = "buttonContainer">
+                        <button class="btn btn-success my-2 my-sm-0 makeDonation" type="submit">Donate</button>
+                        <button class="btn btn-warning my-2 my-sm-0 askDonationButton" type="submit">Ask Donation</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <nav class="navbar navbar-expand-lg navbar-light navbarBottom " id = "Bottom_navbar">
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <p >Search for indiviual donations<span class="sr-only">(current)</span></p>
+                  </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search individual" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+              </div>
+          </nav>
+  
+          </div>
+
+          
+        <script src = "BOOTSTRAP\js\jquery.min.js"></script>
+        <script src = "BOOTSTRAP\js\popper.min.js"></script>
+        <script src = "BOOTSTRAP\js\bootstrap.min.js"></script>
+
+    </body>
+
+</html>

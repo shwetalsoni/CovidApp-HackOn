@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+          <meta charset ="utf-8">
+          <meta name="viewport" content="width=device-width , initial-scale=1.0">
+          <title>Shopkeeper Register</title>
+          <link rel="stylesheet" type="text/css" href="shopRegister.css">
+        <style>
+                @import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css ";
+                 @import url('https://fonts.googleapis.com/css?family=Baloo+Paaji+2&display=swap');
+        </style>
+    </head>
+     
+     <body>
+        <div class="header">
+          <h1>Shop Register</h1>
+        </div>
+            <div class="loginBoxConatiner">
+              <div class="login-box">
+               
+                   <div class="textbox">
+                         <i class="fa fa-fw fa-home"></i>
+                         <input type="text" placeholder="Shop" name="value" value="" id="shopName">  
+                   </div> 
+ 
+                   <div class="textbox">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                        <input type="Password" placeholder="Password" name="value" id="shopPassword">
+                   </div>
+
+                   <div class="textbox">
+                        <i class="fa fa-fw fa-search"></i>
+                        <input type="address" placeholder="Location" name="value" id="shopLocation">
+                   </div>
+
+                   <div class="textbox">
+                        <i class="fa fa-fw fa-search"></i>
+                        <input type="text" placeholder="city" name="value" id="shopCity">
+                   </div>
+
+                   <div class="textbox">
+                        <i class="fa fa-fw fa-search"></i>
+                        <input type="text" placeholder="state" name="value" id="shopState">
+                   </div>
+
+                    <div class="textbox">
+                        <i class="fa fa-product-hunt" aria-hidden="true"></i>
+                        <input type="number" placeholder="Contact number" name="value" id="shopContactNumber">
+                   </div>
+
+                     <div class="textbox">
+                        <i class="fa fa-etsy" aria-hidden="true"></i>
+                        <input type="email" placeholder="E-mail" name="value" id="shopEmail">
+                   </div>
+
+                   <input class="btn" type="button" name="" value="Sign" id="shopSignInButton" onclick="registerShop()">
+          </div>
+        </div>
+
+          <!-- The core Firebase JS SDK is always required and must be listed first -->
+          <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase.js"></script>
+
+          <!-- TODO: Add SDKs for Firebase products that you want to use
+               https://firebase.google.com/docs/web/setup#available-libraries -->
+          <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-analytics.js"></script>
+
+          <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+              apiKey: "AIzaSyAaeJhHXMOAPSwYuISZYxKKKTRmdRToJlc",
+              authDomain: "coronaweb-4bdd6.firebaseapp.com",
+              databaseURL: "https://coronaweb-4bdd6.firebaseio.com",
+              projectId: "coronaweb-4bdd6",
+              storageBucket: "coronaweb-4bdd6.appspot.com",
+              messagingSenderId: "855036673439",
+              appId: "1:855036673439:web:1ed0b2b297761c2b3891aa",
+              measurementId: "G-Y9M89P2H0Q"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+          </script>
+
+          <script type="text/javascript" src="shopRegister.js"></script>
+
+       </body>
+</html>          

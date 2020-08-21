@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+          <meta charset ="utf-8">
+          <title>Shopkeeper Register</title>
+          <link rel="stylesheet" href="style.css">
+        <style>
+                @import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css ";
+                 @import url('https://fonts.googleapis.com/css?family=Baloo+Paaji+2&display=swap');
+
+
+                body {
+                    margin:0;
+                    padding:0;
+                    font-family: 'Baloo Paaji 2', cursive;
+                    background: black;
+                    background-size: cover;
+                }
+
+                .login-box{
+                    width: 280px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: white;
+                    border: 1px solid white;
+                    padding: 8px;
+                }
+
+                 h1{
+                    width: 280px;
+                    position: absolute;
+                    top: 20%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: white;
+                    text-align: center;
+                    font-size: 30px;
+                    border: 1px solid white;
+                    margin-bottom: 50px;
+                    padding: 8px;
+                }
+
+                .textbox{
+                    width: 100%;
+                    overflow: hidden;
+                    font-size: 20px;
+                    padding: 8px 0;
+                    margin: 8px 0;
+                    border-bottom: 1px solid #47BFBC;
+                }
+
+                .textbox i{
+                    width: 26px;
+                    float: left;
+                    text-align: center;
+                }
+
+                .textbox input{
+                    border: none;
+                    outline: none;
+                    background: none;
+                    color: white;
+                    font-size: 18px;
+                    width: 80%;
+                    text-align: center;
+                    margin: 0 10px;
+                }
+
+                .btn{
+                    width: 100%;
+                    background: none;
+                    border:2px solid #47BFBC;
+                    color: white;
+                    padding: 5px;
+                    font-size: 18px;
+                    cursor: pointer;
+                    margin: 12px 0;
+                }
+
+        </style>
+    </head>
+     
+     <body>
+          <h1>Shop Register</h1>
+          <div class="login-box">
+               
+                   <div class="textbox">
+                         <i class="fa fa-fw fa-home"></i>
+                         <input type="text" placeholder="Shop" name="" value="">  
+                   </div> 
+ 
+                   <div class="textbox">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                        <input type="Password" placeholder="Password" name="value">
+                   </div>
+
+                    <div class="textbox">
+                        <i class="fa fa-fw fa-search"></i>
+                        <input type="address" placeholder="Location" name="value">
+                   </div>
+
+                    <div class="textbox" >
+                        <i class="fa fa-product-hunt" aria-hidden="true"></i>
+                        <input type="text" placeholder="Contact number" name="value">
+                   </div>
+
+                     <div class="textbox">
+                        <i class="fa fa-etsy" aria-hidden="true"></i>
+                        <input type="email" placeholder="E-mail" name="value">
+                   </div>
+
+                   <input class="btn" type="button" name="" value="Sign">
+          </div>
+
+       </body>
+</html>          

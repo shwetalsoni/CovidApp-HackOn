@@ -1,0 +1,173 @@
+/* remove the top roght bar for phone screen */
+
+body{
+  overflow-y: hidden;
+  overflow-x: hidden;
+  
+}
+div{
+  font-family: "Ubuntu", sans-serif;
+
+}
+button:focus {
+  outline:0;
+}
+#profilebtn{
+  position: absolute;
+  right: 0px;
+  width: 500px;
+  height: 60px;
+  top: 0px;
+}
+.back{
+  position: absolute;
+  width: 390px;
+  right: 0px;
+  height: 45px;
+  top:9px;
+  background-color: #fff;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  cursor: default;
+  padding-left: 14px;
+  padding-right: 14px;
+  border: none;
+  margin-right: 9px;
+  border-radius: 5px;
+  z-index: 2;
+}
+.shop{
+  font-size: 16px;
+  cursor: pointer;
+  position: absolute;
+  right: 310px;
+  font-family: "Ubuntu", sans-serif;
+  top:9px;
+  background-color: #fff;
+  color: #000000a9;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 14px;
+  padding-right: 14px;
+  border: none;
+  border-radius: 20px;
+  margin-left: 10px;
+  z-index: 3;
+}
+
+.profilebtn {
+  width: 37px;
+  height: 37px;
+  z-index: 3;
+  background-color: white;
+  border-radius: 30px;
+  padding: 7px;
+  align-content: center;
+  position: absolute;
+  right: 11px;
+  top: 11px;
+}
+.donationbtn{
+  font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    right: 125px;
+    top:9px;
+    background-color: #fff;
+    color: #000000a9;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    font-family: "Ubuntu", sans-serif;
+    padding-left: 14px;
+    padding-right: 14px;
+    border: none;
+    border-radius: 20px;
+    margin-left: 10px;
+    z-index: 3;
+
+}
+.donationbtn :hover{
+  color: black;
+}
+.shop :hover{
+  color: black;
+}
+
+
+
+
+.sidebar {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    display: block;
+    left: 0;
+    background-color: #fff; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+  }
+  
+  /* The sidebar links */
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidebar a:hover {
+    color: black;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* The button used to open the sidebar */
+  .openbtn {
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    background-color: #fff;
+    color: #000000a9;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 14px;
+    padding-right: 14px;
+    border: none;
+    margin-top: 9px;
+    border-radius: 18px;
+    margin-left: 10px;
+    z-index: 2;
+  }
+  
+  .openbtn:hover {
+    color: black;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left .5s; /* If you want a transition effect */
+    padding: 0px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+
+  

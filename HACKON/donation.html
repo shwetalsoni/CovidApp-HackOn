@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
+</head>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.navbar {
+  width: 100%;
+  background-color: skyblue;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.navbar a:hover {
+  background-color: blue;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 25px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 12px;
+  margin: 0;
+  background-color: skyblue;
+}
+
+.dropdown:hover .dropbtn{
+  background-color: blue;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px
+  box-shadow: 0 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+
+.dropdown-content a{
+  float:none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.dropdown-content a:hover{
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+</style>
+
+<body>
+
+
+<div class="navbar">
+    <ul class="navbar-left">
+        <a  href="shop.html"><i class="fa fa-fw fa-home"></i> local Shop</a> 
+        <a href="index.html"><i class="fa fa-fw fa-search"></i>Map</a> 
+        <a href="donation.html"><i class="fa fa-fw fa-envelope"></i> Donation</a> 
+
+        <div class="dropdown">
+             
+                 <button class="dropbtn">Login
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                 </button>
+                 <div class="dropdown-content">
+                    <a href="profile.html">My Profile</a>
+                    <a href="order.html">Orders</a>
+                 </div>
+        </div> 
+    </ul>    
+
+   
+    <ul class="navbar-right">
+      <li><a href="#" id="cart"><i class="fa fa-shopping-cart"></i> Cart <span class="badge">3</span></a></li>
+    </ul>
+         
+       
+</div>
+
+</body>
+</html> 
